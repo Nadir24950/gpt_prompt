@@ -1,3 +1,5 @@
+import Feed from "@components/Feed";
+
 const Home = () => {
   return (
     <section className="w-full flex-center flex-col">
@@ -7,9 +9,10 @@ const Home = () => {
         <span className="orange_gradient text-center">AI-Powerd Prompts</span>
       </h1>
       <p className="desc text-center">
-        It is an Open source AI open tool... I am ashe;eemd that IA m copying
-        this without thinking much
+        It is an Open source AI open tool... I am ashamed that I am copying this
+        without thinking much
       </p>
+      <Feed />
     </section>
   );
 };
