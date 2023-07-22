@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
@@ -23,9 +25,9 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
           <textarea
             value={post.prompt}
             onChange={(e) => setPost({ ...post, prompt: e.target.value })}
-            placeholder="white your post here"
+            placeholder="write your prompt here..."
             required
-            className="from_textarea"
+            className="form_textarea"
           />
         </label>
 
