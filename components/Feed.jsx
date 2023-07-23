@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import PromptCard from "./PromptCard";
+import dynamic from "next/dynamic";
 
 const PromptCardList = ({ data, handleTagClick }) => {
   return (
@@ -29,7 +30,8 @@ const Feed = () => {
 
       setPosts(data);
     };
-  });
+    fetchPosts();
+  }, []);
   return (
     <section className="feed">
       <form className="relative w-full flex-center">
@@ -47,4 +49,4 @@ const Feed = () => {
   );
 };
 
-export default Feed;
+export default dynamic(() => Promise.resolve(Feed), { ssr: false });
